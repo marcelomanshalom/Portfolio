@@ -1,0 +1,17 @@
+*Estrutura do Projeto**
+
+--bash--
+
+/automacao-relatorios-python-powerautomate
+├── relatorio.py
+└── README.md
+
+
+**Python**
+import pandas as pd
+df = pd.read_csv('dados.csv')
+df.to_excel('relatorio_semanal.xlsx', index=False)
+
+
+Power Automate
+Fluxo de Automação envia o arquivo gerado por e-mail toda segunda-feira.
