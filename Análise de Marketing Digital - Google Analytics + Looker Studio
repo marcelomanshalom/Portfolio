@@ -1,0 +1,15 @@
+--Estrutura--
+
+/marketing-googleanalytics-looker
+├── screenshots/
+│   └── looker_dashboard.png
+└── README.md
+
+Conteúdo do README.md (exemplo)
+# Análise de Marketing Digital com Looker Studio
+
+Este projeto apresenta um painel conectado ao Google Analytics (GA4), destacando:
+- Sessões por canal de aquisição
+- Taxa de rejeição
+- Conversões por campanha
+
