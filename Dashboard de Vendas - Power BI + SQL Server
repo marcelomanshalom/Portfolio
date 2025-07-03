@@ -1,0 +1,30 @@
+--Estrutura do Projeto--
+
+/dashboard-vendas-powerbi-sql
+│
+├── sql/
+│   └── script_base.sql  # Criação da base e consultas
+├── powerbi/
+│   └── dashboard.pbix  # Arquivo do Power BI
+└── README.md
+
+--SQL – Criação da tabela--
+CREATE TABLE Vendas (
+    ID INT PRIMARY KEY,
+    DataVenda DATE,
+    Produto VARCHAR(100),
+    Categoria VARCHAR(50),
+    Quantidade INT,
+    Preco DECIMAL(10, 2),
+    Canal VARCHAR(50)
+);
+
+--Consulta para Power BI--
+
+SELECT 
+    Categoria,
+    SUM(Quantidade * Preco) AS ReceitaTotal,
+    COUNT(ID) AS TotalVendas
+FROM Vendas
+GROUP BY Categoria;
+
