@@ -1,0 +1,24 @@
+*Estrutura do Projeto*
+
+/api-social-python-postgres
+├── scripts/
+│   └── integracao.py
+└── README.md
+
+**Python com API e PostgreSQL**
+
+import requests
+import psycopg2
+
+def coletar_dados():
+    r = requests.get("https://api.twitter.com/fake_endpoint")
+    dados = r.json()
+    return dados
+
+def salvar_pg(dados):
+    conn = psycopg2.connect(database="social", user="postgres", password="senha")
+    cur = conn.cursor()
+    for post in dados:
+        cur.execute("INSERT INTO posts VALUES (%s, %s)", (post['id'], post['texto']))
+    conn.commit()
+    conn.close()
