@@ -1,0 +1,23 @@
+
+--bash--
+/dw-vendas-ssis
+├── scripts/
+│   └── create_dw.sql
+├── ssis_package/
+│   └── projeto.dtsx
+└── README.md
+
+*Exemplo Modelo Dimensional*
+CREATE TABLE DimProduto (
+    ProdutoID INT PRIMARY KEY,
+    NomeProduto VARCHAR(100),
+    Categoria VARCHAR(50)
+);
+
+CREATE TABLE FatoVendas (
+    VendaID INT PRIMARY KEY,
+    Data DATE,
+    ProdutoID INT,
+    Quantidade INT,
+    Valor DECIMAL(10,2)
+);
