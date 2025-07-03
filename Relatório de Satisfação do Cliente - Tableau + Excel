@@ -1,0 +1,16 @@
+-- Relatório de Satisfação do Cliente - Tableau + Excel--
+
+--Estrutura do Projeto--
+
+/satisfacao-tableau-excel
+├── dados/
+│   └── satisfacao_clientes.xlsx
+├── tableau/
+│   └── relatorio.twb
+└── README.md
+
+Exemplo: 
+| Cliente | Nota | Comentário        |
+| ------- | ---- | ----------------- |
+| João    | 9    | Ótimo atendimento |
+| Maria   | 7    | Produto atrasou   |
