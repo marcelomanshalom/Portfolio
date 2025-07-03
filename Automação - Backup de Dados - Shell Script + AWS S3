@@ -1,0 +1,12 @@
+**Estrutura do Projeto**
+
+/backup-shell-aws
+├── backup.sh
+└── README.md
+
+
+**Shell Script**
+
+#!/bin/bash
+tar -czf backup_$(date +%F).tar.gz /caminho/dos/dados
+aws s3 cp backup_$(date +%F).tar.gz s3://meu-bucket/backups/
