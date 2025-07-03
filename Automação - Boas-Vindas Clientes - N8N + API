@@ -1,0 +1,16 @@
+**Estrutura do Projeto**
+Boas-Vindas Clientes - N8N + API
+
+/automacao-boasvindas-n8n-api
+├── fluxo.json
+└── README.md
+
+
+Fluxo N8N
+
+Trigger: Webhook
+
+Ação: HTTP Request para API de CRM
+
+Ação: E-mail com mensagem de boas-vindas
+
